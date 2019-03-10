@@ -46,14 +46,14 @@ public class EmailService {
 		try {
 
 			Message message = new MimeMessage(session);
-			message.setFrom(new InternetAddress(email.getEmail())); //Remetente
+			message.setFrom(new InternetAddress("portifoliorl2019@gmail.com")); //Remetente
 
 			Address[] toUser = InternetAddress //Destinatário(s)
 					.parse("ricardoccofg@gmail.com");
 
 			message.setRecipients(Message.RecipientType.TO, toUser);
 			message.setSubject(email.getSubject());//Assunto
-			message.setText("Nome: " + email.getName() + "\n" +  "Mensagem: " + email.getMessage());
+			message.setText("Nome: " + email.getName() + "\n" + "Email: " + email.getEmail() + "\n" +  "Mensagem: " + email.getMessage());
 
 			/**Método para enviar a mensagem criada*/
 			Transport.send(message);
