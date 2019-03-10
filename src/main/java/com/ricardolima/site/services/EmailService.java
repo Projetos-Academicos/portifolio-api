@@ -36,7 +36,7 @@ public class EmailService {
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication()
 			{
-				return new PasswordAuthentication("efa3b1@gmail.com", "33632886");
+				return new PasswordAuthentication("portifoliorl2019@gmail.com", "33632886");
 			}
 		});
 
